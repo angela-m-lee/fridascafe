@@ -11,56 +11,92 @@
     <h2 class="brunch">Brunch Menu</h2>
     <h3 class="btime">Served 11am-2pm</h3>
     <h3>Main Plates</h3>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="frencht" />
+    <input type="checkbox" id="frencht" value="frenchtv" onclick="myFunction()" />
     <label for="vehicle1"> French Toast......$15.00</label><br />
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="eggsam" />
+    <input type="checkbox" id="eggsand" value="eggsandv" onclick="myFunction()" />
     <label for="vehicle2"> Egg Sandwich......$18.00</label><br />
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="egghash" />
+    <input type="checkbox" id="egghash" value="egghashv" onclick="myFunction()" />
     <label for="vehicle3"> Egg and Potato Hash......$15.00</label><br />
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="classb" />
+    <input type="checkbox" id="classb" value="classbv" onclick="myFunction()" />
     <label for="vehicle1"> Classic Breakfast......$16.00</label><br />
     <h3>Sides</h3>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="grits" />
+    <input type="checkbox" id="grits" value="gritsv" onclick="myFunction()" />
     <label for="vehicle1"> Grits......$5.00</label><br />
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="fruit" />
+    <input type="checkbox" id="fruit" value="fruitv" onclick="myFunction()" />
     <label for="vehicle2"> Fruit......$4.50</label><br />
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="bacon" />
+    <input type="checkbox" id="bacon" value="baconv" onclick="myFunction()" />
     <label for="vehicle3"> Bacon......$6.00</label><br />
     <h3>Brunch Drinks</h2>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="bmary" />
+    <input type="checkbox" id="bmary" value="bmaryv" onclick="myFunction()" />
     <label for="vehicle1"> Bloody Mary......$9.50</label><br />
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="mimosa" />
+    <input type="checkbox" id="mimosa" value="mimosav" onclick="myFunction()" />
     <label for="vehicle2"> Mimosa......$6.00</label><br />
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="bbeer" />
+    <input type="checkbox" id="bbeer" value="bbeerv" onclick="myFunction()" />
     <label for="vehicle3"> Brunch Beer......$5.00</label><br />
     <h2 class="linner">Lunch and Dinner Menu</h2>
     <h3 class="ltime">Served 1pm to 11pm</h3>
     <h3>Main Plates</h3>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="bltsam" />
+    <input type="checkbox" id="bltsam" value="bltsamv" onclick="myFunction()" />
     <label for="vehicle1"> BLT Sandwich......$15.00</label><br />
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="soupbowl" />
+    <input type="checkbox" id="soupbowl" value="soupbowlv" onclick="myFunction()" />
     <label for="vehicle2"> Soup of the Day (bowl)......$12.50</label><br />
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="cheeseb" />
+    <input type="checkbox" id="cheeseb" value="cheesebv" onclick="myFunction()" />
     <label for="vehicle3"> Cheeseburger and Fries......$18.50</label><br />
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="spaghetti" />
+    <input type="checkbox" id="spaghetti" value="spaghettiv" onclick="myFunction()" />
     <label for="vehicle1"> Spaghetti......$16.00</label><br />
     <h3>Sides</h3>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="soupcup" />
+    <input type="checkbox" id="soupcup" value="soupcupv" onclick="myFunction()" />
     <label for="vehicle1"> Soup of the day (cup)......$4.50</label><br />
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="veggies" />
+    <input type="checkbox" id="veggies" value="veggiesv" onclick="myFunction()" />
     <label for="vehicle2"> Veggies......$5.00</label><br />
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="fries" />
+    <input type="checkbox" id="fries" value="friesv" onclick="myFunction()"/>
     <label for="vehicle3"> Fries......$6.00</label><br />
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="sides" />
+    <input type="checkbox" id="sidesal" value="sidesalv" onclick="myFunction()"/>
     <label for="vehicle1"> Salad......$5.00</label><br />
     <h3>Drinks</h3>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="manhattan" />
-    <label for="vehicle1"> Manhattan......$14.00</label><br />
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="wine" />
-    <label for="vehicle2"> Wine......$8.50</label><br />
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="whiskey" />
-    <label for="vehicle3"> Whiskey......$12.00</label><br />
+    <input type="checkbox" id="manhattan" value=14.00 name="food" />
+    <label for="food"> Manhattan......$14.00</label><br />
+    <input type="checkbox" id="wine" value=8.50 name="food" />
+    <label for="food"> Wine......$8.50</label><br />
+    <input type="checkbox" id="whiskey" value=12.00 name="food" />
+    <label for="food"> Whiskey......$12.00</label><br />
+    <h2>Total:</h2>
+    <p id="text" style="display:none">TOTAL NUMBER</p>
+    <input type="button" onclick="alert(getCheckedCheckboxesFor('food'));" value="Get Values" />
+    <script>
+      /*function myFunction() {
+        var checkBoxes = document.getElementById("manhattan");
+        var text = document.getElementById("text");
+        if (checkBoxes.checked == true){
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+        var checkBox = document.getElementById("wine");
+        var text = document.getElementById("text");
+        if (checkBox.checked == true){
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+        var checkBox = document.getElementById("whiskey");
+        var text = document.getElementById("text");
+        if (checkBox.checked == true){
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      }*/
+
+      function getCheckedCheckboxesFor(checkboxName) {
+        var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]:checked'), values = [];
+        var text = document.getElementById("text");
+        Array.prototype.forEach.call(checkboxes, function(el) {
+          values.push(el.value);
+      });
+    return values;
+}
+    </script>
     
-    <input type="submit" value="Submit" />
-  </body>
+   <a href="/cafef.html"> <button class="submit">Submit</button></a>
 </html>
